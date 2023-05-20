@@ -5,7 +5,8 @@ import {Title, Space, Container, Col, Image, Icon} from "../Elements/Elements"
 import Tilt from "react-vanilla-tilt"
 import AboutContent from "../Elements/HomePage/AboutContent"
 import SingleFeature from "../Elements/HomePage/SingleFeature"
-import { FaBolt, FaCode, FaShieldAlt, FaUsers, FaFingerprint, FaReact, FaClock, FaPalette, FaUikit, FaDesktop, FaVideo, FaCompress, FaShareAlt } from "react-icons/fa"
+import { FaBolt, FaCode, FaShieldAlt, FaUsers, FaFingerprint, FaReact, FaClock, FaPalette, FaUikit, FaDesktop, FaVideo, FaCompress, FaShareAlt, FaBuromobelexperte, FaSms, FaDatabase, FaPenNib } from "react-icons/fa"
+import {GiHospitalCross, GiBlackBook, GiBookPile, GiCalculator} from 'react-icons/gi'
 import { NavLink } from "react-router-dom"
 export const AboutContext = React.createContext();
 const HomePage = () => {
@@ -18,6 +19,11 @@ const HomePage = () => {
       title: "High successful Sa video platform with a patented technology used by global enterprises.",
       content: "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment so blinded by desire.", 
       items: ["Bringing new IT solutions to the market", "To be included the list of the best IT solutions", "Research and Content Planing", "Publishing and Execution", "Deliver the Final Product"]
+   }
+
+   const clientsAndPartners = [];
+   for (let i = 1; i <= 27; i++){
+      clientsAndPartners.push(<Col className="col-md-2" key={`partners${i}`}><Image className="partner-image" style={{ objectFit: 'contain' }} srcName={`${publicPath}/partners/${i}.png`} altName={`image${i}`} /></Col>)
    }
   return (
      <>
@@ -189,15 +195,90 @@ const HomePage = () => {
            {/* Think area end */}
 
 
-            {/* Features area start */}
+            {/* Solutions area start */}
            <Space bgColor="233051">
               <Title space="0 0 50px 0" subTitleColor={["#cdcbcb", "#344a83", "#344a83"]} subTitle="Our Solutions" title="With all the Solutions <br /> You Need." titleColor="#fff" content="Credibly grow premier ideas rather than bricks-and-clicks strategic theme areas distributed for stand-alone web-readiness." contentColor="#cdcbcb"></Title>
 
               <Container>
-                
+                 <Col>
+                    <Tilt          className = "p-0 m-0 tilt">
+                    <SingleFeature bgColor   = "rgb(103 77 243 / 16%)" className = "text-white p-3 rounded border-1 iylma-single-feature d-block" title = "Attendance & Office Management System" content = "Appropriately grow competitive leadership rather than strategic technically" >
+                    <Icon          icon      = {<FaBuromobelexperte />}  bgColor = "#674DF3" className                                                  = "mb-4"></Icon>
+                      </SingleFeature>
+                   </Tilt>
+                 </Col>
+                 <Col>
+                    <Tilt          className = "p-0 m-0 tilt">
+                    <SingleFeature bgColor   = "rgb(116 181 27/ 16%)" className = "text-white p-3 rounded border-1 iylma-single-feature d-block" title = "Bulk SMS Solutions" content = "Appropriately grow competitive leadership rather than strategic technically" >
+                    <Icon          icon      = {<FaSms />}  bgColor              = "#74B51B" className                                                  = "mb-4"></Icon>
+                      </SingleFeature>
+                   </Tilt>
+                 </Col>
+                 <Col>
+                    <Tilt          className = "p-0 m-0 tilt">
+                    <SingleFeature bgColor   = "rgb(54 197 240 / 16%)" className = "text-white p-3 rounded border-1 iylma-single-feature d-block" title = "Hospital Management System" content = "Appropriately grow competitive leadership rather than strategic technically" >
+                    <Icon          icon      = {<GiHospitalCross />}  bgColor    = "#36C5F0" className                                                  = "mb-4"></Icon>
+                      </SingleFeature>
+                   </Tilt>
+                 </Col>
+                 <Col>
+                    <Tilt          className = "p-0 m-0 tilt">
+                    <SingleFeature bgColor   = "rgb(255 107 53 / 16%)" className = "text-white p-3 rounded border-1 iylma-single-feature d-block" title = "ERP System" content = "Appropriately grow competitive leadership rather than strategic technically" >
+                    <Icon          icon      = {<FaDatabase />}  bgColor    = "#FF6B35" className                                                  = "mb-4"></Icon>
+                      </SingleFeature>
+                   </Tilt>
+                 </Col>
+                 <Col>
+                    <Tilt          className = "p-0 m-0 tilt">
+                    <SingleFeature bgColor   = "rgb(23 92 255/ 16%)" className = "text-white p-3 rounded border-1 iylma-single-feature d-block" title = "Accounting Software" content = "Appropriately grow competitive leadership rather than strategic technically" >
+                    <Icon          icon      = {<GiCalculator />}  bgColor    = "#175CFF" className                                                  = "mb-4"></Icon>
+                      </SingleFeature>
+                   </Tilt>
+                 </Col>
+                 <Col>
+                    <Tilt          className = "p-0 m-0 tilt">
+                    <SingleFeature bgColor   = "rgb(116 181 27 / 16%)" className = "text-white p-3 rounded border-1 iylma-single-feature d-block" title = "Recruitment Management System" content = "Appropriately grow competitive leadership rather than strategic technically" >
+                    <Icon          icon      = {<FaUsers />}  bgColor    = "#74B51B" className                                                  = "mb-4"></Icon>
+                      </SingleFeature>
+                   </Tilt>
+                 </Col>
+                 <Col className="col-md-6 col-lg-6">
+                    <Tilt          className = "p-0 m-0 tilt">
+                    <SingleFeature bgColor   = "rgb(237 140 34/16%)" className = "text-white p-3 rounded border-1 iylma-single-feature d-block" title = "Inventory System" content = "Appropriately grow competitive leadership rather than strategic technically" >
+                    <Icon          icon      = {<GiBookPile />}  bgColor    = "#ED8C22" className                                                  = "mb-4"></Icon>
+                      </SingleFeature>
+                   </Tilt>
+                 </Col>
+                 <Col className="col-md-6 col-lg-6">
+                    <Tilt          className = "p-0 m-0 tilt">
+                    <SingleFeature bgColor   = "rgb(48 240 182 / 16%)" className = "text-white p-3 rounded border-1 iylma-single-feature d-block" title = "Learning Management System" content = "Appropriately grow competitive leadership rather than strategic technically" >
+                    <Icon          icon      = {<FaPenNib />}  bgColor    = "#30F0B6" className                                                  = "mb-4"></Icon>
+                      </SingleFeature>
+                   </Tilt>
+                 </Col>
               </Container>
            </Space>
-           {/* Features area end */}
+           {/* Solutions area end */}
+
+
+           {/* Partners area start */}
+             <Space bgColor = "E5E2F8">
+             <Title space   = "0 0 50px 0" subTitle = "Clients & Parners with IYLMA" title = "We Works with the <br/> Best Clients and Partners" content = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae abillo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."></Title>
+              <Container>
+                {clientsAndPartners}
+             </Container>
+            </Space>
+           {/* Partners area end */}
+
+           {/* Contact area start */}
+           <Space padding="100px 0 0 0">
+              <Title space = "0 0 50px 0" subTitle = "Stay with us" title = "Contact us" content = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae abillo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."></Title>
+              
+              {/* Map area start */}
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.491552519903!2d90.38847937603263!3d23.872182184088782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c79e73ac79b1%3A0x3ff80328b3bd0825!2sIYLMA%20Innovation%20Ltd.!5e0!3m2!1sen!2sbd!4v1684603662908!5m2!1sen!2sbd" width="100%" height="650"  loading="lazy" ></iframe>
+              {/* Map area end */}
+           </Space>
+           {/* Contact area end */}
          </Master>
      </>
   )
